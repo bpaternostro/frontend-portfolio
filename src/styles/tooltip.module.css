@@ -1,0 +1,15 @@
+.tooltipContainer{
+  display: flex;
+  align-items: center;
+}
+
+.tooltip {
+    position: relative;
+    background: var(--site-button-color);
+    color:var(--color-grey);
+    visibility: hidden;
+    padding: 4px;
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: var(--font-weight);
+  }

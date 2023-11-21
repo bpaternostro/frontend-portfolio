@@ -1,0 +1,183 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+    padding: 0px 80px 0px 60px;
+    align-self: stretch;
+    /*border-bottom: 2px solid var(--background-color-containers);*/
+    width: 100vw;
+    position: sticky; top: 0;
+    background-color: var(--background-color);
+    z-index: 1000;
+}
+
+header div{
+    display: flex;
+    align-items: center;
+}
+
+header div:nth-child(1) nav{
+    display: flex;
+    align-items: center;
+    gap:30px;
+}
+
+.logoBrandContainer{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    background-color: var(--background-color);
+    height: 70%;
+    border-radius: 20px;
+    color: #FFF;
+    padding: 15px;
+}
+
+.logoBrand{
+    color: var(--grey-white);;
+    font-size: 30px;
+    font-weight: var(--font-weight);
+    font-family: var(--font-family-links);
+    border-left: 2px solid var(--grey-white);
+    padding-left: 10px;
+}
+
+header a{
+    font-size: 20px;
+    font-family: var(--font-family-links);
+    display: flex;
+    flex-direction: column;
+}
+
+
+header a:hover{
+    color: var(--color-green-1);
+}
+
+
+header div:nth-child(2){
+    width: 30%;
+    gap: 5px;
+    border-radius: 30px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08);
+}
+
+header div:nth-child(2) input{
+    border: none;
+    font-weight: var(--font-weight);
+    color: var(--gray-blue-grey-blue-80);
+    font-size: 18px;
+    font-family: var(--font-family-links);
+}
+
+.searchContainer > span{
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    margin: 10px;
+    margin-left: 15px;
+}
+
+#searchNavIcon, .closeButtonSearch, header > div:nth-child(3) > span{
+    display: none;
+}
+
+.closeButtonSearch{
+    position: absolute;
+    font-size: 12px;
+    right: 1px;
+}
+
+.sectionMark{
+    width: 100%;
+    border: 2px solid var(--color-green-1);
+    display: none;
+}
+
+header > div:nth-child(1) > span{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+header > div:nth-child(1) > span:nth-child(1) > span{
+    padding: 20px;
+}
+
+header > div:nth-child(1) > span:nth-child(1) > span > button{
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    font-size: 12px;
+    margin: 5px;
+    right: 15px;
+    top:10px;
+    position: absolute;
+}
+
+#searchMobile{
+    width: 100%;
+    padding: 10px;
+}
+
+@media screen and (max-width: 900px) {    
+    header{
+        justify-content: space-between;
+        padding: 0px 20px 0px 20px;
+    }
+
+    header > div:nth-child(3) > span{
+        width: 100%;
+    }
+
+    #searchNavIcon{
+        display: block;
+    }
+
+    .searchContainer, .logoBrand {
+        display: none;
+    }
+    
+    #searchMobile{
+        width: 400px;
+        padding: 10px;
+    }
+    
+    header > div:nth-child(3) > span:nth-child(1) > span > button{
+        right: 35px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    header{
+        justify-content: space-between;
+        padding: 0px 10px 0px 10px;
+    }
+
+    .logoBrandContainer{
+        padding: 5px;
+        width: auto;
+    }
+    
+    #searchMobile{
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    
+    header{
+        padding: 0px 5px 0px 5px;
+    }
+
+    header > a{
+        font-size: 12px;
+    }
+}

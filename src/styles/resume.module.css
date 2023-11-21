@@ -1,0 +1,352 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    width: 100vw;
+}
+
+button{
+    background: transparent;
+}
+
+main > div:nth-child(1) > div:nth-child(2) > span{
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.container{
+    font-size: var(--font-size-general);
+    padding: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    background-color: var(--background-color);
+}
+
+.about{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.about > span:nth-child(1) {
+    padding: 10px;
+}
+.about > span:nth-child(2){
+    padding: 10px;
+    width: 50%;
+    border-left: 2px solid var(--grey-white);
+}
+
+.profileImage{
+    border-radius: 200px;
+    width: 180px;  
+    height: 180px;
+    object-fit: cover;
+    object-position: 35% 35%; 
+}
+
+.experienceContainer, .educationContainer, .skillMenuContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    font-size: var(--font-size-general);
+    background-color: var(--background-color);
+    border-radius: 5px;
+    border: 1px solid var(--background-color-containers);
+}
+
+.contactContainer{
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    font-size: var(--font-size-general);
+    background-color: var(--background-color);
+    border-radius: 5px;
+    border: 1px solid var(--background-color-containers);
+}
+
+.experienceContainer{
+    width: 90%;
+    border: 1px solid var(--background-color-containers);
+}
+
+.educationContainer{
+    flex-direction: column;
+    gap:5px;
+    flex-wrap: wrap;
+    padding: 10px;
+    width: 70%;
+    border: 1px solid var(--background-color-containers);
+}
+
+.dateContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 70px;
+}
+
+.experienceParentContainer{
+    padding: 30px;
+    width: 60vw;
+    border-left: 2px solid var(--background-color-containers);
+    border-top: 2px solid var(--background-color-containers);
+}
+
+.skillParentContainer{
+    width: 23vw;
+    background-color: var(--background-color-containers);
+    border-top-right-radius: 10px;
+}
+
+.skillParentContainer > .container{
+    background-color: var(--background-color-containers);
+}
+
+.contactDetail{
+    display: flex;
+    gap:10px;
+    align-items: center;
+}
+
+.contactAddress{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-size: var(--font-size-general);
+    gap: 3px;
+}
+.contactIconsContainer{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.experienceContainer > span{
+    padding: 5px;
+    width: 100%;
+} 
+
+.experienceContainerBullets{
+    display: flex;
+}
+
+.dates, .skillBullet, .skillBulletAside, .references{
+    padding: 5px;
+    font-size: var(--font-size-bullets);
+    font-weight: var(--font-weight);
+    border-radius: 5px;
+    border: 1px solid var(--background-color);
+    background-color: var(--background-color-containers);
+    color: var(--grey-white);
+}
+
+.skillBulletAside{
+    border: 1px solid var(--color-green-1);
+    color:var(--grey-white);
+}
+
+.dates{
+    padding: 4px;
+    font-size: var(--font-size-dates);
+    margin-right: 2px;
+    color:var(--grey-white);
+    border: 1px solid var(--color-green-1);
+}
+
+.company{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.company > img{
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+}
+
+.company > a{
+    color: var(--grey-white);
+    font-weight: var(--font-weight-strong);
+    font-size: var(--font-size-titles);
+    font-family: var(--font-family-links);
+}
+
+.skillBullet{
+    background-color: var(--color-violet);
+}
+
+.skillBulletContainer{
+    margin-top: 5px;
+    font-size: var(--font-size-bullets);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.skillContainer{
+    display: flex;
+    gap: 3px;
+    flex-wrap: wrap;
+}
+
+.references{
+    padding: 15px;
+    font-size: var(--font-size-section);
+    background-color: var(--background-color);
+}
+
+.titleBubble, .instituteBubble{
+    display: flex;
+    align-items: center;
+    padding: 5px 15px 5px 10px;
+    gap:5px;
+}
+
+.instituteBubble{
+    padding: 5px;
+    display: flex;
+}
+
+.titleBubble{
+    background-color: var(--color-violet);
+    color: var(--color-grey);
+    border-radius: 10px;
+}
+
+.titleBubble > span:nth-child(2){
+    color: var(--color-grey);
+    font-weight: var(--font-weight-strong);
+}
+
+.timelineContainer{
+    position: relative;
+    width: 15%;
+    display: flex;
+    align-items: center;
+}
+
+.timelineContainerAbs{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 95%;
+    z-index: 0;
+    background-color: transparent;
+}
+
+.vertical {
+    border-left: 4px solid var(--background-color-containers);
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+}
+
+.iconContactSection:hover{
+    font-size: 15px;
+    color: var(--color-green-1);
+}
+
+.instituteBubble > span {
+    display: flex;
+    align-items: center;
+}
+
+.instituteBubble > span > span {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+    header{
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+    header > div:nth-child(2){
+        display: none;
+    }
+
+    .contactContainer{
+        padding: 10px;
+    }
+
+    .contactFormContainer{
+        padding: 30px;
+        width: 100%;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    main > div{
+        width: 100%;
+    }
+
+    .timelineContainerAbs{
+        width: 1%;
+    }
+
+    .experienceParentContainer, .skillParentContainer, .educationContainer{
+        width: 100%;
+        gap:25px;
+        border: none;
+        padding: 15px;
+        justify-content: center;
+    }
+
+    .dates{
+        font-size: 9px;
+    }
+
+    .timelineContainer{
+        width: 5%;
+    }
+
+    .experienceContainer, .educationContainer{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .about{
+        flex-direction: column;
+    }
+
+    .about> span:nth-child(2){
+        width: 100%;
+    }
+
+    .experienceParentContainer, .skillParentContainer, .educationContainer{
+        width: 100%;
+        gap:25px;
+        border: none;
+        padding: 5px;
+        justify-content: center;
+    }
+
+    :root{
+        --font-size-general: 16px;
+        --font-size-section: 10px;
+        --font-size-bullets: 9px;
+        --font-size-dates: 8px;
+        --font-size-titles: 18px;
+        --font-size-subtitles: 16px;
+    }
+
+    .dates{
+        font-size: 8px;
+    }
+
+}

@@ -1,0 +1,95 @@
+.contactFormContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 15px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    width: 100%;
+}
+
+label{
+    color: var(--grey-white);
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: var(--font-weight);
+    line-height: normal;
+}
+
+input, textarea{
+    width: 100%;
+    border-radius: 8px;
+    border: 0.5px solid var(--grey-light);
+    padding: 3px 8px 3px 16px;
+}
+
+input{
+    height: 40px;
+}
+
+input::placeholder {
+    color: var(--gray-blue-grey-blue-50);
+    font-weight: var(--font-weight-light);
+}
+
+textarea{
+    width: 100%;
+}
+
+.contactFormContainer{
+    display: flex;
+    flex-direction: column;
+    gap:25px;
+    height: auto;
+    width: 50%;
+    padding: 60px;
+    border-radius: 10px;
+    background: var(--background-color);
+    border: 1px solid var(--background-color-containers);
+}
+
+.contactContainer > div > form > div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    justify-content: center;
+    align-items: start;
+}
+
+.contactContainer > div > form > div:nth-child(2){
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.contactFormContainerTitle{
+    color: var(--grey-dark, #586870);
+    /* title/H5 */
+    font-family: var(--font-family-links-2);
+    font-size: 18px;
+    font-weight: var(--font-weight);
+    text-align: left;
+    width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+    .contactContainer{
+        width: 100%;
+        padding: 15px;
+    }
+
+    .contactFormContainer{
+        padding: 30px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+   
+
+}
