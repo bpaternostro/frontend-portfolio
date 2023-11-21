@@ -4,7 +4,7 @@ import { indexStyle } from '../styles'
 const Success = () => {
   return (
     <main>
-          <h3 className={indexStyle.h3}>Tu mensaje fue enviado correctamente. <br></br> En breve nos estaremos poniendo contacto.</h3>
+          <h3 className={indexStyle.successMessage}>Your message was sent successfully!<br></br> I will contact you as soon as possible. <span>&#128512;</span> </h3>
     </main>
   )
 }

@@ -96,6 +96,26 @@ img{
     font-family: var(--font-family);
 }
 
+.socialNetworkShareBar{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: solid 1px var(--background-color-containers);
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+}
+
+.shareCount{
+    border: solid 1px var(--background-color-containers);
+    border-radius: 10px;
+    background-color: var(--background-color-containers);
+    font-weight: var(--font-weight-strong);
+    font-family: var(--font-family-links);
+    width: 30px;
+    padding: 5px;
+    text-align: center;
+}
+
 @media screen and (max-width: 1000px) {
     .post{
         width: 100%;

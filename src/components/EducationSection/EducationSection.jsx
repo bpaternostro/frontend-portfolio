@@ -4,6 +4,7 @@ import { resumeStyle, indexStyle } from '../../styles'
 import { SiGooglescholar } from 'react-icons/si'
 import { HiMiniBuildingLibrary } from 'react-icons/hi2'
 import { PiCertificate } from 'react-icons/pi'
+import { BiSolidStarHalf, BiSolidStar  } from 'react-icons/bi'
 
 const EducationSection = ({education}) => {
   const {title, summary, institute, start_date, end_date, is_certification, status_name} = education || {}

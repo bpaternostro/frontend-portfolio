@@ -114,6 +114,13 @@ ul{
     padding: 0px 0 10px 20px;
 }
 
+.successMessage{
+    padding: 5px;
+    color: var(--prime-letter-color);
+    font-family: var(--font-family-links);
+    font-size: 40px;
+}
+
 @media screen and (max-width: 900px) {
     main{
         padding: 0px 30px;
