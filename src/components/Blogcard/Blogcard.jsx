@@ -28,7 +28,6 @@ const Blogcard = ({ name, category, summary, description, link, image, like, sha
   
   const reaction = (field) => {
     fetch(`${import.meta.env.VITE_REACTION}/${id}/register-reaction/`, {
-      mode:  'cors', 
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({

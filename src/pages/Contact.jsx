@@ -16,7 +16,6 @@ const Contact = () => {
   const handleSubmit = async (e) => {
       e.preventDefault();
       fetch(import.meta.env.VITE_MESSAGE, {
-        mode:  'cors', 
         method: "post",
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(data)
