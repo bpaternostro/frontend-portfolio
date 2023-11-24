@@ -39,6 +39,7 @@ const GlobalContextProvider = ({children}) => {
 
     useEffect(() => {
         fetch(import.meta.env.VITE_PERSON, {
+            mode: 'cors',
             headers: {'Content-Type': 'application/json'}}
         )
         .then( res => {
