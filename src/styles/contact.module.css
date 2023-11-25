@@ -104,7 +104,7 @@ select{
     font-size: 18px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
     .contactContainer{
         width: 100%;
         padding: 15px;
@@ -116,7 +116,18 @@ select{
     }
 }
 
-@media screen and (max-width: 500px) {
-   
+@media screen and (max-width: 600px) {
+    .contactTypeContainer{
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .contactTypeContainer > span:nth-child(1){
+        width: 100%;
+    }
+    
+    .contactTypeContainer > span:nth-child(2){
+        width: 100%;    
+    }
 
 }
