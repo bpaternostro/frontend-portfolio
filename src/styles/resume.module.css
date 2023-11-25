@@ -58,6 +58,7 @@ main > div:nth-child(1) > div:nth-child(2) > span{
     background-color: var(--background-color);
     border-radius: 5px;
     border: 1px solid var(--background-color-containers);
+    background: var(--background-color-containers);
 }
 
 .contactContainer{

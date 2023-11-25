@@ -59,7 +59,7 @@ body{
 main{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     padding: 50px;
     min-height: 70vh;
 }
@@ -70,7 +70,6 @@ button{
 
 .boxContainer{
     border-radius: 10px;
-    background: var(--background-color-containers);
     /* Shadows/Gray Blue 30/3%/5b */
     box-shadow: 0px 2px 5px 0px rgba(38, 51, 77, 0.03);
     border: 10px;
