@@ -8,10 +8,10 @@ const SkillSection = ({skill}) => {
       {
         Object.entries(skill).map(([key, value]) => (  
           <div className={resumeStyle.skillMenuContainer} key={key}>
-            <p>{key!=="Other" ? key: ""}</p>
             {value.map((s) => {
-              const {id, name, level} = s
+              const {id, name, level, institute} = s
               return  <div className={resumeStyle.skillBulletContainer}>
+                        <p>{institute}</p>
                         <span className={resumeStyle.skillBulletAside} key={id}>{name}</span>
                         <span>{[...Array(level+1)].map((e, i) => <BsDiamondFill key={i} color={"#FFF"} size={14} />)}</span>
                       </div>

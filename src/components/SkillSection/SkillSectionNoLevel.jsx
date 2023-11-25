@@ -1,6 +1,6 @@
 import React from 'react'
 import { resumeStyle, indexStyle } from '../../styles'
-import { BsDiamondFill } from "react-icons/bs";
+import {RxStar} from 'react-icons/rx'
 
 const SkillSection = ({skill}) => {
   return (
@@ -13,7 +13,6 @@ const SkillSection = ({skill}) => {
               const {id, name, level} = s
               return  <div className={resumeStyle.skillBulletContainer}>
                         <span className={resumeStyle.skillBulletAside} key={id}>{name}</span>
-                        <span>{[...Array(level+1)].map((e, i) => <BsDiamondFill key={i} color={"#FFF"} size={14} />)}</span>
                       </div>
             })}
           </div>

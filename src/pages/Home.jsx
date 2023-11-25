@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { useGlobalContext } from '../context/GlobalContextProvider'
 import { resumeStyle } from '../styles'
-import { ExperienceSection, EducationSection, SkillSection } from '../components'
-import {RxStar} from 'react-icons/rx'
+import { ExperienceSection, EducationSection, SkillSection, SkillSectionInstitute, SkillSectionNoLevel } from '../components'
+import { BsDiamondFill } from "react-icons/bs";
 
 const Home = () => {
   const {person} = useGlobalContext()
@@ -32,26 +32,26 @@ const Home = () => {
           <div className={ resumeStyle.container}>
             <h2 className={ resumeStyle.title}>Skills</h2>
             <div className={`${ resumeStyle.container} ${resumeStyle.boxContainer} ${resumeStyle.references}`}>
-              <span><RxStar/><RxStar/><RxStar/> More than 3 years of experience</span>
-              <span><RxStar/><RxStar/> Between 1 and 3 years of experience</span>
-              <span><RxStar/> Less than 1 year of experience</span>
+              <span><BsDiamondFill/><BsDiamondFill/><BsDiamondFill/> More than 3 years of experience</span>
+              <span><BsDiamondFill/><BsDiamondFill/> Between 1 and 3 years of experience</span>
+              <span><BsDiamondFill/> Less than 1 year of experience</span>
             </div>
           </div>
           <div className={ resumeStyle.container }>
             <h3 className={ resumeStyle.title}>Aptitudes</h3>
-              {aptitude && <SkillSection skill={aptitude} />}
+              {aptitude && <SkillSection skill={aptitude} skillType={"aptitude"} />}
           </div>
           <div className={ resumeStyle.container }>
             <h3 className={ resumeStyle.title}>Certification</h3>
-            {certification && <SkillSection skill={certification} />}
+            {certification && <SkillSectionInstitute skill={certification} skillType={"certification"} />}
           </div>
           <div className={ resumeStyle.container }>
             <h3 className={ resumeStyle.title}>Language</h3>
-            {language && <SkillSection skill={language} />}
+            {language && <SkillSectionNoLevel skill={language} skillType={"language"}/>}
           </div>
           <div className={ resumeStyle.container }>
             <h3 className={ resumeStyle.title}>Soft Skills</h3>
-            {soft_skill && <SkillSection skill={soft_skill} />}
+            {soft_skill && <SkillSectionNoLevel skill={soft_skill} skillType={"soft_skill"}/>}
           </div>
         </div>
         

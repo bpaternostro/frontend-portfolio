@@ -4,7 +4,7 @@ import { resumeStyle, indexStyle } from '../../styles'
 import { SiGooglescholar } from 'react-icons/si'
 import { HiMiniBuildingLibrary } from 'react-icons/hi2'
 import { PiCertificate } from 'react-icons/pi'
-import { BiSolidStarHalf, BiSolidStar  } from 'react-icons/bi'
+import { BsDiamondFill, BsDiamondHalf } from "react-icons/bs";
 
 const EducationSection = ({education}) => {
   const {title, summary, institute, start_date, end_date, is_certification, status_name} = education || {}
@@ -26,7 +26,7 @@ const EducationSection = ({education}) => {
                   <span><HiMiniBuildingLibrary/></span>
                   <span className={ resumeStyle.sectionFilterCategory}>{institute}</span>
                   <Tooltip text={status_name}>
-                      { status_name==="Completed" ? <BiSolidStar size={20}/>: <BiSolidStarHalf size={20}/> }
+                      { status_name==="Completed" ? <BsDiamondFill size={20}/>: <BsDiamondHalf size={20}/> }
                   </Tooltip>
                 </span>
               </div>
