@@ -30,7 +30,7 @@ main > div:nth-child(2) > div:nth-child(2) > span{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10px;
+    gap: 5px;
     border-top-right-radius: 10px;
     position: relative;
 }
@@ -199,7 +199,8 @@ main > div:nth-child(2) > div:nth-child(2) > span{
 
 .company > img{
     width: 80px;
-    border-radius: 60px;
+    height: 80px;
+    border-radius: 80px;
 }
 
 .company > a{
