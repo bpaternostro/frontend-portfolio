@@ -1,7 +1,7 @@
 main{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: start;
     gap: 10px;
     width: 100vw;
 }
@@ -10,7 +10,15 @@ button{
     background: transparent;
 }
 
-main > div:nth-child(1) > div:nth-child(2) > span{
+
+main > div {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+}
+
+main > div:nth-child(2) > div:nth-child(2) > span{
     display: flex;
     align-items: center;
     justify-content: center;    
@@ -18,12 +26,13 @@ main > div:nth-child(1) > div:nth-child(2) > span{
 
 .container{
     font-size: var(--font-size-general);
-    padding: 7px;
+    padding: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
-    background-color: var(--background-color);
+    border-top-right-radius: 10px;
+    position: relative;
 }
 
 .about{
@@ -31,34 +40,61 @@ main > div:nth-child(1) > div:nth-child(2) > span{
     flex-direction: row;
     align-items: center;
     gap: 10px;
+    border-radius: 15px;
+    width: 90%;
+    padding: 50px;
 }
 
 .about > span:nth-child(1) {
-    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
+
 .about > span:nth-child(2){
-    padding: 10px;
+    padding: 20px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.about > span:nth-child(2) > h1{
     width: 50%;
-    border-left: 2px solid var(--grey-white);
 }
 
 .profileImage{
     border-radius: 200px;
-    width: 180px;  
-    height: 180px;
+    width: 200px;  
+    height: 200px;
     object-fit: cover;
     object-position: 35% 35%; 
+    border: 5px solid var(--color-green-1);
 }
 
-.experienceContainer, .educationContainer, .skillMenuContainer{
+.experienceContainer, .educationContainer, .skillMenuContainer, .skillMenuContainerSoft{
     display: flex;
     flex-direction: column;
-    padding: 15px;
+    padding: 25px;
     font-size: var(--font-size-general);
-    background-color: var(--background-color);
     border-radius: 5px;
-    border: 1px solid var(--background-color-containers);
-    background: var(--background-color-containers);
+    gap:10px;
+    /*border: 2px solid var(--background-color-containers);
+    background: var(--background-color-containers);*/
+}
+
+.skillMenuContainer, .skillMenuContainerSoft{
+    padding: 5px;
+}
+
+.skillMenuContainerSoft{
+    flex-direction: row;
+}
+
+.skillMenuContainerSoft, .skillMenuContainer{
+    border: 1px solid var(--background-color);
+    background: var(--background-color);
 }
 
 .contactContainer{
@@ -71,44 +107,35 @@ main > div:nth-child(1) > div:nth-child(2) > span{
     border: 1px solid var(--background-color-containers);
 }
 
+
+.experienceContainer, .educationContainer{
+    border: 3px solid var(--background-color-containers);
+}
+
 .experienceContainer{
-    width: 90%;
-    border: 1px solid var(--background-color-containers);
+    width: 100%;
 }
 
 .educationContainer{
     flex-direction: column;
-    gap:5px;
+    gap:10px;
     flex-wrap: wrap;
-    padding: 10px;
+    padding: 20px;
     width: 70%;
-    border: 1px solid var(--background-color-containers);
-}
-
-.dateContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
-    width: 70px;
 }
 
 .experienceParentContainer{
     padding: 30px;
     width: 60vw;
-    border-left: 2px solid var(--background-color-containers);
-    border-top: 2px solid var(--background-color-containers);
+    /*border-left: 2px solid var(--background-color-containers);
+    border-top: 2px solid var(--background-color-containers);*/
 }
 
 .skillParentContainer{
-    width: 23vw;
-    background-color: var(--background-color-containers);
-    border-top-right-radius: 10px;
-}
-
-.skillParentContainer > .container{
-    background-color: var(--background-color-containers);
+    width: 20vw;
+    /*background-color: var(--background-color-containers);*/
+    border: 5px solid var(--background-color-containers);
+    padding: 30px;
 }
 
 .contactDetail{
@@ -139,6 +166,11 @@ main > div:nth-child(1) > div:nth-child(2) > span{
     display: flex;
 }
 
+.summaryContainer{
+    background-color: var(--background-color-containers);
+    border-radius: 10px;
+}
+
 .dates, .skillBullet, .skillBulletAside, .references{
     padding: 5px;
     font-size: var(--font-size-bullets);
@@ -152,12 +184,13 @@ main > div:nth-child(1) > div:nth-child(2) > span{
 .skillBulletAside{
     border: 1px solid var(--color-green-1);
     color:var(--grey-white);
+    margin:2px;
 }
 
 .dates{
-    padding: 4px;
+    padding: 7px;
     font-size: var(--font-size-dates);
-    margin-right: 2px;
+    margin-right: 5px;
     color:var(--grey-white);
     border: 1px solid var(--color-green-1);
 }
@@ -193,6 +226,11 @@ main > div:nth-child(1) > div:nth-child(2) > span{
     gap: 5px;
 }
 
+.skillBulletContainer > span:nth-child(2) {
+    display: flex;
+    gap: 2px;
+}
+
 .skillContainer{
     display: flex;
     gap: 3px;
@@ -205,10 +243,15 @@ main > div:nth-child(1) > div:nth-child(2) > span{
     background-color: var(--background-color);
 }
 
+.references > span{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
 .titleBubble, .instituteBubble{
     display: flex;
     align-items: center;
-    padding: 5px 15px 5px 10px;
     gap:5px;
 }
 
@@ -218,7 +261,6 @@ main > div:nth-child(1) > div:nth-child(2) > span{
 }
 
 .titleBubble{
-    background-color: var(--color-violet);
     color: var(--color-grey);
     border-radius: 10px;
 }
@@ -228,28 +270,45 @@ main > div:nth-child(1) > div:nth-child(2) > span{
     font-weight: var(--font-weight-strong);
 }
 
-.timelineContainer{
-    position: relative;
-    width: 15%;
+.homeSectionContainer{
     display: flex;
     align-items: center;
+    width: 100%;
+    gap:15px;
 }
 
-.timelineContainerAbs{
-    position: absolute;
+.homeSectionContainer > div:nth-child(1){
+    position: relative;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    height: 95%;
-    z-index: 0;
-    background-color: transparent;
+    justify-content: start;
+    color: var(--color-grey);
+    font-size: var(--font-size-general);
+    padding-left: 8px;
+    width: 35px;
+}
+
+.homeSectionContainer > div:nth-child(2){
+    width: 100%;
+}
+
+.timelineContainer{
+    position: absolute;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 
 .vertical {
-    border-left: 4px solid var(--background-color-containers);
+    border-left: 2px solid var(--background-color);
     position: absolute;
     z-index: -1;
-    height: 100%;
+    height: 97%;
+    padding: 15px;
+    border-radius: 5px;
+    background: rgb(32,32,50);
+    background: linear-gradient(0deg, rgba(32,32,50,1) 9%, rgba(89,51,197,1) 100%);
 }
 
 .iconContactSection:hover{
@@ -267,6 +326,33 @@ main > div:nth-child(1) > div:nth-child(2) > span{
     align-items: center;
 }
 
+.educationSummary{
+    padding: 5px;
+    font-size: var(--font-size-summary);
+}
+
+.educationSummaryHidden{
+    display: none;
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    .experienceParentContainer{
+        padding: 10px;
+        width: 60vw;
+        /*border-left: 2px solid var(--background-color-containers);
+        border-top: 2px solid var(--background-color-containers);*/
+    }
+    
+    .skillParentContainer{
+        width: 30vw;
+        /*background-color: var(--background-color-containers);*/
+        border: 2px solid var(--background-color-containers);
+    }
+
+}
+
 @media screen and (max-width: 900px) {
     header{
         padding: 20px;
@@ -278,6 +364,10 @@ main > div:nth-child(1) > div:nth-child(2) > span{
         display: none;
     }
 
+    main{
+        align-items: center;
+    }
+
     .contactContainer{
         padding: 10px;
     }
@@ -287,16 +377,9 @@ main > div:nth-child(1) > div:nth-child(2) > span{
         width: 100%;
     }
 
-    main {
-        flex-direction: column;
-    }
-
-    main > div{
+    main > div:nth-child(2){
         width: 100%;
-    }
-
-    .timelineContainerAbs{
-        width: 1%;
+        flex-direction: column;
     }
 
     .experienceParentContainer, .skillParentContainer, .educationContainer{
@@ -311,22 +394,50 @@ main > div:nth-child(1) > div:nth-child(2) > span{
         font-size: 9px;
     }
 
-    .timelineContainer{
-        width: 5%;
-    }
-
     .experienceContainer, .educationContainer{
         width: 100%;
     }
+
+    .about{
+        width: 95%;
+    }
+
+    .homeSectionContainer > div:nth-child(1){
+        width: 5%;
+    }
+
+    .skillParentContainer{
+        flex-direction: row;
+        align-items: start;
+        flex-wrap: wrap;
+    }
+
+    .skillParentContainer > div:nth-child(1){
+        width: 80%;
+    }
+
+    .skillParentContainer > div{
+        align-items: center;
+    }
+
+    .experienceParentContainer, .skillParentContainer{
+        padding: 10px;
+        width: 100vw;
+    }
+
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
     .about{
         flex-direction: column;
     }
 
-    .about> span:nth-child(2){
+    .about > span{
         width: 100%;
+    }
+
+    h1{
+        font-size: 60px;
     }
 
     .experienceParentContainer, .skillParentContainer, .educationContainer{
@@ -335,6 +446,26 @@ main > div:nth-child(1) > div:nth-child(2) > span{
         border: none;
         padding: 5px;
         justify-content: center;
+    }
+
+    .about > span:nth-child(2){
+        padding: 20px;
+        width: 100%;
+    }
+    
+    .about > span:nth-child(2) > h1{
+        width: 100%;
+    }
+
+    main > div{
+        gap:50px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .about{
+        padding: 5px;
     }
 
     :root{
@@ -350,4 +481,21 @@ main > div:nth-child(1) > div:nth-child(2) > span{
         font-size: 8px;
     }
 
+    h1{
+        font-size: 55px;
+    }
+
+    .container{
+        padding: 4px;
+    }
+
 }
+
+@media screen and (max-width: 300px) {
+    h1{
+        font-size: 42px;
+    }
+
+    
+}
+    

@@ -8,9 +8,8 @@ const SkillSection = ({skill}) => {
       {
         Object.entries(skill).map(([key, value]) => (  
           <div className={resumeStyle.skillMenuContainer} key={key}>
-            <p>{key}</p>
             {value.map((s) => {
-              const {id, name, level, institute} = s
+              const {id, name, level} = s
               return  <div className={resumeStyle.skillBulletContainer}>
                         <span className={resumeStyle.skillBulletAside} key={id}>{name}</span>
                         <span>{[...Array(level+1)].map((e, i) => <LuHexagon key={i} color={"var(--skill-color-icon)"} size={16} />)}</span>
