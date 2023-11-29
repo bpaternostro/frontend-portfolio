@@ -41,7 +41,7 @@ const Contact = () => {
   }
     
   return (
-      <main className={contactStyle.contactContainer}>
+      <div className={contactStyle.contactContainer}>
         <div className={contactStyle.contactFormContainer}>
               <form onSubmit={handleSubmit} method='Post'>
                   <div>
@@ -70,7 +70,7 @@ const Contact = () => {
                   </div>
               </form>
         </div>
-      </main>    
+      </div>    
   )
 }
 

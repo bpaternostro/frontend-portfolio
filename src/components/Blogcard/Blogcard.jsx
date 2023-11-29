@@ -18,6 +18,7 @@ import {
 } from "react-share";
 
 import { Link } from 'react-router-dom'
+import { MdUnfoldMore, MdOutlineUnfoldLess } from "react-icons/md";
 
 const Blogcard = ({ name, category, summary, description, link, image, like, share, skill, view, hashtags,  id }) => {
   const[actualLike, setActualLike] = useState(like)
@@ -25,7 +26,7 @@ const Blogcard = ({ name, category, summary, description, link, image, like, sha
   const[actualView, setActualview] = useState(view)
   const[likeWasClicked, setLikeWasClicked] = useState(false)
   const[shareWasClicked, setShareWasClicked] = useState(false)
-  
+  const [show, setShow] = useState(false)
   const reaction = (field) => {
     fetch(`${import.meta.env.VITE_REACTION}/${id}/register-reaction/`, {
       mode: 'cors',
@@ -63,8 +64,13 @@ const Blogcard = ({ name, category, summary, description, link, image, like, sha
         </span>
         <span>
           <div className={blogCardStyle.postName}>{name}</div>
-          <div className={blogCardStyle.postSummary}>{summary}</div>
-          <div className={blogCardStyle.postDescription}>{description.split("<br>").map((p) => <p className={blogCardStyle.postParagraph} key={p}>{p}</p>)}</div>
+          <div className={blogCardStyle.postSummary}>
+            <span>{summary}</span>
+            <span>
+              {show ? < MdOutlineUnfoldLess className={resumeStyle.expandContractButton} onClick={() => setShow(!show)} color={"var(--expand-post-button)"} size={25}/>: <MdUnfoldMore className={resumeStyle.expandContractButton} onClick={() => setShow(!show)} color={"var(--expand-post-button)"} size={25} />} 
+            </span>
+          </div>
+          <div style={{display: show ? 'block' : 'none' }} className={blogCardStyle.postDescription}>{description.split("<br>").map((p) => <p className={blogCardStyle.postParagraph} key={p}>{p}</p>)}</div>
           <div className={resumeStyle.skillContainer}>
               {
                 skill.map((t) => <span className={ resumeStyle.skillBullet} key={t}>{t}</span>)

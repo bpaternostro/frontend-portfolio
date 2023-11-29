@@ -27,7 +27,7 @@
     --background-color: #202032;
     --background-color-containers: #2E2E48;
     --font-size-general: 18px;
-    --font-size-section: 13px;
+    --font-size-section: 16px;
     --font-size-summary: 15px;
     --font-size-bullets: 12px;
     --font-size-dates: 12px;
@@ -37,6 +37,11 @@
     --references-icon-size:10;
     --skill-color-icon:rgba(255, 255, 255, 0.8);
     --skill-icon-size:10;
+    --expand-experience-button:var(--grey-light);
+    --expand-skill-button:var(--grey-light);
+    --expand-education-button:var(--grey-light);
+    --expand-post-button:var(--grey-light); 
+    --location-icon-color: var(--grey-light);
 }
 
 *{
@@ -102,7 +107,7 @@ h1{
 }
 
 h2{
-    font-size: 22px;
+    font-size: 32px;
     padding: 5px;
     color: var(--prime-letter-color);
     font-weight: var(--font-weight-strong);

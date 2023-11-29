@@ -96,7 +96,7 @@ footer div:nth-child(3){
 @media screen and (max-width: 500px) {
    
     footer{
-        padding: 40px 20px 50px 20px;
+        padding: 40px 50px 50px 40px;
     }
 
     footer > div:nth-child(2){

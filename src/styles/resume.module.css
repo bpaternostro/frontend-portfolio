@@ -30,8 +30,8 @@ main > div:nth-child(2) > div:nth-child(2) > span{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 5px;
-    border-top-right-radius: 10px;
+    gap: 15px;
+    border-radius: 10px;
     position: relative;
 }
 
@@ -70,7 +70,7 @@ main > div:nth-child(2) > div:nth-child(2) > span{
     height: 250px;
     object-fit: cover;
     object-position: 35% 35%; 
-    border: 5px solid var(--color-violet);
+    border: 8px solid var(--background-color-containers);
 }
 
 .experienceContainer, .educationContainer, .skillMenuContainer, .skillMenuContainerSoft{
@@ -82,6 +82,14 @@ main > div:nth-child(2) > div:nth-child(2) > span{
     gap:10px;
     /*border: 2px solid var(--background-color-containers);
     background: var(--background-color-containers);*/
+}
+
+
+.experienceContainer > div:nth-child(2) > div{
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    margin-top: 10px;
 }
 
 .skillMenuContainer, .skillMenuContainerSoft{
@@ -105,7 +113,7 @@ main > div:nth-child(2) > div:nth-child(2) > span{
 
 
 .experienceContainer, .educationContainer{
-    border: 3px solid var(--background-color-containers);
+    border: 5px solid var(--background-color-containers);
 }
 
 .experienceContainer{
@@ -120,6 +128,19 @@ main > div:nth-child(2) > div:nth-child(2) > span{
     width: 70%;
 }
 
+.educationContainer > div:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.educationContainer > div:nth-child(2) > div{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    margin-top: 5px;
+}
+
 .experienceParentContainer{
     padding: 30px;
     width: 60vw;
@@ -128,9 +149,7 @@ main > div:nth-child(2) > div:nth-child(2) > span{
 }
 
 .skillParentContainer{
-    width: 20vw;
-    /*background-color: var(--background-color-containers);*/
-    border: 5px solid var(--background-color-containers);
+    width: 23vw;
     padding: 30px;
 }
 
@@ -164,7 +183,7 @@ main > div:nth-child(2) > div:nth-child(2) > span{
 
 .summaryContainer{
     background-color: var(--background-color-containers);
-    border-radius: 10px;
+    border-radius: 2px;
 }
 
 .dates, .skillBullet, .skillBulletAside, .references{
@@ -194,16 +213,28 @@ main > div:nth-child(2) > div:nth-child(2) > span{
 .company{
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+
+.company > span{
+    display: flex;
+    align-items: center;
     gap: 10px;
 }
 
-.company > img{
+.company > span > img{
     width: 80px;
     height: 80px;
     border-radius: 80px;
 }
 
-.company > a{
+.company > span > span{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.company > span > span > a{
     color: var(--grey-white);
     font-weight: var(--font-weight-strong);
     font-size: var(--font-size-titles);
@@ -231,6 +262,16 @@ main > div:nth-child(2) > div:nth-child(2) > span{
     padding: 5px;
 }
 
+.skillParentContainer > .container > div:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skillParentContainer > .container:not(:first-child) {
+    border: 5px solid var(--background-color-containers);
+}
+
 .skillContainer{
     display: flex;
     gap: 3px;
@@ -238,9 +279,10 @@ main > div:nth-child(2) > div:nth-child(2) > span{
 }
 
 .references{
-    padding: 5px;
+    padding: 25px;
+    border-radius: 10px;
     font-size: var(--font-size-section);
-    background-color: var(--background-color);
+    background-color: var(--background-color-containers);
 }
 
 .references > span{
@@ -249,10 +291,16 @@ main > div:nth-child(2) > div:nth-child(2) > span{
     gap: 2px;
 }
 
+.title{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
 .titleBubble, .instituteBubble{
     display: flex;
     align-items: center;
-    gap:5px;
+    gap:10px;
 }
 
 .instituteBubble{
@@ -340,6 +388,14 @@ main > div:nth-child(2) > div:nth-child(2) > span{
     background: var(--background-color);
 }
 
+.expandContractButton, .clickContainer {
+    cursor: pointer;
+}
+
+.expandContractButton:hover{
+    color: var(--color-violet);
+}
+
 @media screen and (max-width: 1200px) {
 
     .experienceParentContainer{
@@ -351,9 +407,8 @@ main > div:nth-child(2) > div:nth-child(2) > span{
     
     .skillParentContainer{
         width: 30vw;
-        /*background-color: var(--background-color-containers);*/
-        border: 2px solid var(--background-color-containers);
     }
+
 
 }
 
@@ -414,10 +469,11 @@ main > div:nth-child(2) > div:nth-child(2) > span{
         flex-direction: row;
         align-items: start;
         flex-wrap: wrap;
+        margin-bottom: 100px;
     }
 
     .skillParentContainer > div:nth-child(1){
-        width: 80%;
+        width: 100%;
     }
 
     .skillParentContainer > div{
@@ -442,6 +498,7 @@ main > div:nth-child(2) > div:nth-child(2) > span{
 
     h1{
         font-size: 60px;
+        line-height: 55px;
     }
 
     .experienceParentContainer, .skillParentContainer, .educationContainer{
@@ -487,19 +544,35 @@ main > div:nth-child(2) > div:nth-child(2) > span{
 
     h1{
         font-size: 55px;
+        line-height: 50px;
     }
 
     .container{
         padding: 4px;
     }
 
+    .company > span > img{
+        width: 40px;
+        height: 40px;
+        border-radius: 80px;
+    }
+
+    .roleExperienceIcon{
+        display: none;
+    }
+    
+
+
 }
 
 @media screen and (max-width: 300px) {
     h1{
         font-size: 42px;
+        line-height: 40px;
     }
 
-    
+
+    .experienceContainer, .educationContainer, .skillMenuContainer, .skillMenuContainerSoft{
+        padding: 15px;
+    }
 }
-    

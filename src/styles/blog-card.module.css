@@ -23,7 +23,7 @@
 }
 
 .postParagraph{
-    margin: 10px;
+    margin: 5px;
 }
 
 .postDetailContainer{
@@ -88,6 +88,9 @@ img{
     border-radius: 10px;
     font-family: var(--font-family);
     background-color: var(--background-color-containers);
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 .postDescription{
