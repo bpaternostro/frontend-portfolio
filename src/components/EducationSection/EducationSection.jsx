@@ -12,7 +12,7 @@ const EducationSection = ({education}) => {
   const {title, summary, institute, start_date, end_date, is_certification, status_name} = education || {}
   const [show, setShow] = useState(false)
   return (
-    <div className={`${ resumeStyle.container} ${indexStyle.boxContainer}`}>
+    <div className={resumeStyle.container}>
       <div className={ resumeStyle.experienceContainerBullets }>
         <div className={ resumeStyle.educationContainer }>
           <div onClick={() => setShow(!show)} className={resumeStyle.clickContainer}>
