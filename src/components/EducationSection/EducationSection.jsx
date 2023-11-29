@@ -14,7 +14,7 @@ const EducationSection = ({education}) => {
   return (
     <div className={`${ resumeStyle.container} ${indexStyle.boxContainer}`}>
       <div className={ resumeStyle.experienceContainerBullets }>
-        <div className={`${ resumeStyle.educationContainer} ${indexStyle.boxContainer}`}>
+        <div className={ resumeStyle.educationContainer }>
           <div onClick={() => setShow(!show)} className={resumeStyle.clickContainer}>
             <span className={ resumeStyle.titleBubble }>
               <span>{ is_certification ? <PiCertificate color={"#FFF"}/>: <FaUserGraduate color={"#FFF"} />}</span>

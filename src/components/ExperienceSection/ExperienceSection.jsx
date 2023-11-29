@@ -10,7 +10,7 @@ const ExperienceSection = ({experience}) => {
   return (
     <div className={`${ resumeStyle.container} ${indexStyle.boxContainer}`}>
       <div className={ resumeStyle.experienceContainerBullets }>
-        <div className={`${ resumeStyle.experienceContainer} ${indexStyle.boxContainer}`} >
+        <div className={resumeStyle.experienceContainer} >
           <div className={ `${ resumeStyle.company} ${resumeStyle.clickContainer}`} onClick={() => setShow(!show)}>
             <span>
               <img src={logo} alt={company} />
