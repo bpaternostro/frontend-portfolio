@@ -78,10 +78,12 @@ const Blogcard = ({ name, category, summary, description, link, image, like, sha
           </div>
           <div className={blogCardStyle.interactiveBar}>
             <span>
-              <span><Link to={link} target="_blank" onClick={(event) => reaction("3")}><MdOutlinePreview color={"#33BBC5"} size={25} /></Link></span>
-              <span className={blogCardStyle.shareCount}>{actualView}</span>
+              <span>
+                <span><Link to={link} target="_blank" onClick={(event) => reaction("3")}><MdOutlinePreview color={"#33BBC5"} size={25} /></Link></span>
+                <span className={blogCardStyle.shareCount}>{actualView}</span>
+              </span>
+              <span><span><button onClick={(event) => reaction("1")} disabled={likeWasClicked}><AiFillLike color={"#FFF"} size={20} /></button></span><span className={blogCardStyle.shareCount}>{actualLike}</span></span>
             </span>
-            <span><span><button onClick={(event) => reaction("1")} disabled={likeWasClicked}><AiFillLike color={"#FFF"} size={20} /></button></span><span className={blogCardStyle.shareCount}>{actualLike}</span></span>
             <span>
               <span className={blogCardStyle.socialNetworkShareBar}>
                   <FacebookShareButton

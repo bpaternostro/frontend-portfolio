@@ -20,6 +20,9 @@
 
 .post > span:nth-child(2){
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
 }
 
 .postParagraph{
@@ -41,6 +44,13 @@
 }
 
 .interactiveBar > span{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 3px;
+}
+
+.interactiveBar > span > span{
     display: flex;
     align-items: center;
     justify-content: end;
@@ -129,5 +139,15 @@ img{
 @media screen and (max-width: 600px) {
     .post{
         width: 100%
+    }
+
+    .interactiveBar{
+        flex-direction: column;
+        gap:10px;
+    }
+
+
+    .post > span:nth-child(2){
+        gap:20px;
     }
 }
