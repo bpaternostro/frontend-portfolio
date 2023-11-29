@@ -135,6 +135,7 @@ ul{
     main{
         padding: 0px 10px;
         flex-direction: column;
+        align-items: center;
     }
 
     .btnPrimary{
@@ -142,6 +143,36 @@ ul{
     }
 
 }
+
+
+@media screen and (max-width: 800px) {
+    h1{
+        font-size: 60px;
+        line-height: 55px;
+    }
+
+    main > div{
+        gap:50px;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    :root{
+        --font-size-general: 16px;
+        --font-size-section: 10px;
+        --font-size-bullets: 9px;
+        --font-size-dates: 8px;
+        --font-size-titles: 18px;
+        --font-size-subtitles: 16px;
+    }
+
+    h1{
+        font-size: 55px;
+        line-height: 50px;
+    }
+}
+
 
 @media screen and (max-width: 300px) {
     main{
@@ -156,5 +187,11 @@ ul{
     .iconContactSection{
         font-size: 14px;
     }
+
+    h1{
+        font-size: 42px;
+        line-height: 40px;
+    }
+
 }
 

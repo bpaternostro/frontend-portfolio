@@ -426,12 +426,9 @@ main > div:nth-child(2) > div:nth-child(2) > span{
         gap: 20px;
         margin-bottom: 40px;
     }
+    
     header > div:nth-child(2){
         display: none;
-    }
-
-    main{
-        align-items: center;
     }
 
     .contactContainer{
@@ -503,11 +500,6 @@ main > div:nth-child(2) > div:nth-child(2) > span{
         width: 100%;
     }
 
-    h1{
-        font-size: 60px;
-        line-height: 55px;
-    }
-
     .experienceParentContainer, .skillParentContainer, .educationContainer{
         width: 100%;
         gap:25px;
@@ -525,9 +517,6 @@ main > div:nth-child(2) > div:nth-child(2) > span{
         width: 100%;
     }
 
-    main > div{
-        gap:50px;
-    }
 
 }
 
@@ -536,22 +525,8 @@ main > div:nth-child(2) > div:nth-child(2) > span{
         padding: 5px;
     }
 
-    :root{
-        --font-size-general: 16px;
-        --font-size-section: 10px;
-        --font-size-bullets: 9px;
-        --font-size-dates: 8px;
-        --font-size-titles: 18px;
-        --font-size-subtitles: 16px;
-    }
-
     .dates{
         font-size: 8px;
-    }
-
-    h1{
-        font-size: 55px;
-        line-height: 50px;
     }
 
 
@@ -568,12 +543,6 @@ main > div:nth-child(2) > div:nth-child(2) > span{
 }
 
 @media screen and (max-width: 300px) {
-    h1{
-        font-size: 42px;
-        line-height: 40px;
-    }
-
-
     .experienceContainer, .educationContainer, .skillMenuContainer, .skillMenuContainerSoft{
         padding: 20px;
     }
