@@ -60,7 +60,7 @@ const Blogcard = ({ name, category, summary, description, link, image, like, sha
   return (
     <div className={`${ blogCardStyle.post } ${blogCardStyle.boxContainer}`}>
         <span className={blogCardStyle.imageContainer}>
-          <img src={`${import.meta.env.VITE_PORTFOLIO_API_URL}/${image}`} alt={summary} />
+          <img src={image} alt={summary} />
         </span>
         <span>
           <div className={blogCardStyle.postName}>{name}</div>

@@ -3,8 +3,6 @@ import { useGlobalContext } from '../context/GlobalContextProvider'
 import { resumeStyle, indexStyle } from '../styles'
 import { ExperienceSection, EducationSection, SkillSection, SkillSectionInstitute, SkillSectionNoLevel, SkillSectionLanguage } from '../components'
 import { LuHexagon } from "react-icons/lu";
-import { FaSourcetree } from "react-icons/fa";
-import { IoIosArrowDropdown, IoIosArrowDropup } from "react-icons/io";
 import { MdExpandMore, MdExpandLess } from "react-icons/md";
 import { ImLocation } from "react-icons/im";
 

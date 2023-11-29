@@ -6,9 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Bruno Paternostro - Personal Portfolio">
     <title>BP Portfolio</title>
+    <style>
+      .loader-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+      }
+      .loader {
+        border: 16px solid var(--background-color-containers);
+        border-top: 16px solid var(--color-violet);
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 2s linear infinite;
+      }
+      
+      @keyframes spin {
+        0%  { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
+    <!-- Loading Spinner Div -->
+    <div class="loader-container">
+      <div class="loader"></div>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

@@ -171,6 +171,11 @@ ul{
         font-size: 55px;
         line-height: 50px;
     }
+
+    .successMessage{
+        padding: 50px;
+        font-size: 30px;
+    }
 }
 
 

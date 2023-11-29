@@ -2,7 +2,7 @@ import React, { useContext, createContext, useState, useEffect } from 'react'
 
 const GlobalContext = createContext()
 const GlobalContextProvider = ({children}) => {
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(true)
     const [person, setPerson] = useState()
     const [posts, setPostToShow] = useState([])
     const [blog, setBlog] = useState([])
@@ -38,6 +38,11 @@ const GlobalContextProvider = ({children}) => {
     },[blog])
 
     useEffect(() => {
+        const loaderElement = document.querySelector(".loader-container");
+        if (loaderElement) {
+            loaderElement.remove();
+            setLoading(!loading);
+        }
         fetch(import.meta.env.VITE_PERSON, {
             mode: 'cors',
             headers: {'Content-Type': 'application/json'}}
@@ -58,10 +63,14 @@ const GlobalContextProvider = ({children}) => {
             return
         })
         .finally(() => {
-            setLoading(false)
+            setLoading(!loading)
         })
     },[])
 
+    if(loading) { //
+        return null;
+    }
+    
     return (
         <GlobalContext.Provider value={{ posts, categories, filterFields, person, filterBySearchInputBox, handleFilterFields }}>
             {children}
