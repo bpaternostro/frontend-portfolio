@@ -42,7 +42,7 @@ main > div:nth-child(2) > div:nth-child(2) > span{
     gap: 10px;
     border-radius: 15px;
     width: 90%;
-    padding: 50px;
+    padding: 25px;
 }
 
 .about > span:nth-child(1) {
