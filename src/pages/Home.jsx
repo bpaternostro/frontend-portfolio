@@ -24,7 +24,6 @@ const Home = () => {
   
   return (
     <main>
-        { person ? 
         <div className={resumeStyle.mainDiv}>
             <div>
                 <div className={resumeStyle.about}>  
@@ -97,7 +96,7 @@ const Home = () => {
                     </div>
                   </div>
               </div> 
-            </div> : setLoading(!loading)}
+            </div>
     </main>
   )
 }
