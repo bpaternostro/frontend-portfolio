@@ -92,7 +92,7 @@ const Blogcard = ({ name, category, summary, description, link, image, like, sha
                     onClick={(event) => reaction("2")}
                     quote={summary}
                     hashtag={hashtags}
-                    image={`${import.meta.env.VITE_PORTFOLIO_API_URL}/${image}`}
+                    image={`${API_ENDPOINTS.portfolioUrl}/${image}`}
                   >
                     <FacebookIcon size={25} round />
                   </FacebookShareButton>
@@ -101,7 +101,7 @@ const Blogcard = ({ name, category, summary, description, link, image, like, sha
                     onClick={(event) => reaction("2")}
                     quote={summary}
                     hashtag={hashtags}
-                    image={`${import.meta.env.VITE_PORTFOLIO_API_URL}/${image}`}
+                    image={`${API_ENDPOINTS.portfolioUrl}/${image}`}
                   >
                     <LinkedinIcon size={25} round />
                   </LinkedinShareButton>
@@ -110,7 +110,7 @@ const Blogcard = ({ name, category, summary, description, link, image, like, sha
                     onClick={(event) => reaction("2")}
                     quote={summary}
                     hashtag={hashtags}
-                    image={`${import.meta.env.VITE_PORTFOLIO_API_URL}/${image}`}
+                    image={`${API_ENDPOINTS.portfolioUrl}/${image}`}
                   >
                     <TelegramIcon size={25} round />
                   </TelegramShareButton>
@@ -119,7 +119,7 @@ const Blogcard = ({ name, category, summary, description, link, image, like, sha
                     onClick={(event) => reaction("2")}
                     quote={summary}
                     hashtag={hashtags}
-                    image={`${import.meta.env.VITE_PORTFOLIO_API_URL}/${image}`}
+                    image={`${API_ENDPOINTS.portfolioUrl}/${image}`}
                   >
                     <WhatsappIcon size={25} round />
                   </WhatsappShareButton>
@@ -128,7 +128,7 @@ const Blogcard = ({ name, category, summary, description, link, image, like, sha
                     onClick={(event) => reaction("2")}
                     quote={summary}
                     hashtag={hashtags}
-                    image={`${import.meta.env.VITE_PORTFOLIO_API_URL}/${image}`}
+                    image={`${API_ENDPOINTS.portfolioUrl}/${image}`}
                   >
                     <TwitterIcon size={25} round />
                   </TwitterShareButton>
@@ -137,7 +137,7 @@ const Blogcard = ({ name, category, summary, description, link, image, like, sha
                     onClick={(event) => reaction("2")}
                     quote={summary}
                     hashtag={hashtags}
-                    image={`${import.meta.env.VITE_PORTFOLIO_API_URL}/${image}`}
+                    image={`${API_ENDPOINTS.portfolioUrl}/${image}`}
                   >
                     <RedditIcon size={25} round />
                   </RedditShareButton>
