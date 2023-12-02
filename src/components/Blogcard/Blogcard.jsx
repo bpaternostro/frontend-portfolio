@@ -19,6 +19,7 @@ import {
 
 import { Link } from 'react-router-dom'
 import { MdUnfoldMore, MdOutlineUnfoldLess } from "react-icons/md";
+import { API_ENDPOINTS } from '../../apiConfig';
 
 const Blogcard = ({ name, category, summary, description, link, image, like, share, skill, view, hashtags,  id }) => {
   const[actualLike, setActualLike] = useState(like)
@@ -28,7 +29,7 @@ const Blogcard = ({ name, category, summary, description, link, image, like, sha
   const[shareWasClicked, setShareWasClicked] = useState(false)
   const [show, setShow] = useState(false)
   const reaction = (field) => {
-    fetch(`${import.meta.env.VITE_REACTION}/${id}/register-reaction/`, {
+    fetch(`${API_ENDPOINTS.postReaction}/${id}/register-reaction/`, {
       mode: 'cors',
       method: 'post',
       headers: {'Content-Type': 'application/json'},

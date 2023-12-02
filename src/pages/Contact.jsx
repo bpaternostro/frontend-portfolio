@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { buttonStyle, contactStyle } from '../styles'
 import { useNavigate } from 'react-router';
+import { API_ENDPOINTS } from '../apiConfig';
 
 const Contact = () => {
   const [data, setData] = useState({contact_type:0})
@@ -15,7 +16,7 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
       e.preventDefault();
-      fetch(import.meta.env.VITE_MESSAGE, {
+      fetch(API_ENDPOINTS.postMessage, {
         mode: 'cors',
         method: "post",
         headers: {'Content-Type': 'application/json'},

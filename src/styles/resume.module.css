@@ -418,11 +418,11 @@ main > .mainDiv > div:nth-child(2) > div:nth-child(2) > span{
 @media screen and (max-width: 1800px) {
 
     .experienceParentContainer{
-        width: 65vw;
+        width: 60vw;
     }
     
     .skillParentContainer{
-        width: 35vw;
+        width: 30vw;
     }
 }
 

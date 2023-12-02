@@ -1,4 +1,5 @@
 import React, { useContext, createContext, useState, useEffect } from 'react'
+import { API_ENDPOINTS } from '../apiConfig';
 
 const GlobalContext = createContext()
 const GlobalContextProvider = ({children}) => {
@@ -43,7 +44,7 @@ const GlobalContextProvider = ({children}) => {
             loaderElement.remove();
             setLoading(!loading);
         }
-        fetch(import.meta.env.VITE_PERSON, {
+        fetch(API_ENDPOINTS.getPerson, {
             mode: 'cors',
             headers: {'Content-Type': 'application/json'}}
         )
