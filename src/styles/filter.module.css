@@ -28,15 +28,10 @@
     border-radius: 5px;
 }
 
-.appliedFilter:hover, .filterToApplied:hover{
-    background-color: var(--color-violet);
-    color: var(--grey-white);
-}
-
 .appliedFilter{
     background-color: var(--color-violet);
     color: var(--grey-white);
-    
+    border: 1px solid var(--color-violet);
 }
 
 .filterToApplied{

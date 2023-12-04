@@ -39,11 +39,6 @@ const GlobalContextProvider = ({children}) => {
     },[blog])
 
     useEffect(() => {
-        const loaderElement = document.querySelector(".loader-container");
-        if (loaderElement) {
-            loaderElement.remove();
-            setLoading(!loading);
-        }
         fetch(API_ENDPOINTS.getPerson, {
             mode: 'cors',
             headers: {'Content-Type': 'application/json'}}
@@ -51,6 +46,11 @@ const GlobalContextProvider = ({children}) => {
         .then( res => {
             if(!res.ok){
                 throw new Error('X');
+            }
+            const loaderElement = document.querySelector(".loader-container");
+            if (loaderElement) {
+                loaderElement.remove();
+                setLoading(!loading);
             }
             return res.json()
         })

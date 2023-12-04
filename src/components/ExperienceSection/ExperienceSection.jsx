@@ -5,10 +5,10 @@ import { MdUnfoldMore, MdOutlineUnfoldLess } from "react-icons/md";
 import { FaRegUser } from "react-icons/fa";
 
 const ExperienceSection = ({experience}) => {
-  const {task, skill, title, start_date, end_date, company, url_company, logo} = experience || {}
+  const {task, skill, title, start_date, end_date, company, url_company, logo, id} = experience || {}
   const [show, setShow] = useState(false)
   return (
-    <div className={ resumeStyle.container}>
+    <div className={ resumeStyle.container} key={id}>
       <div className={ resumeStyle.experienceContainerBullets }>
         <div className={resumeStyle.experienceContainer} >
           <div className={ `${ resumeStyle.company} ${resumeStyle.clickContainer}`} onClick={() => setShow(!show)}>

@@ -13,18 +13,19 @@ const Home = () => {
   const [showCertifications, setShowCertifications] = useState(false)
   const [showLanguage, setShowLanguage] = useState(false)
   const [showSoftSkills, setShowSoftSkills] = useState(false)
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
   
   useEffect(() => {
     const loaderElement = document.querySelector(".loader-container");
     if (loaderElement) {
         loaderElement.remove();
         setLoading(!loading);
-    }},[loading])
+    }},[])
   
+
   return (
     <main>
-        <div className={resumeStyle.mainDiv}>
+        {person ? <div className={resumeStyle.mainDiv} key={"mainDiv"}>
             <div>
                 <div className={resumeStyle.about}>  
                     <span>
@@ -40,12 +41,12 @@ const Home = () => {
               <div className={ `${resumeStyle.container} ${resumeStyle.experienceParentContainer}`}>
                 <h2 className={ resumeStyle.title}>Experiences</h2>
                 <div className={ resumeStyle.container }>
-                  {experience && experience.map((e)=> <div className={ resumeStyle.homeSectionContainer }><div><div className={ resumeStyle.timelineContainer }><ImLocation color={"var(--location-icon-color)"} /></div></div><ExperienceSection experience={e} key={e.id}/></div>)}
+                  {experience && experience.map((e)=> <div className={ resumeStyle.homeSectionContainer } key={e.id}><div><div className={ resumeStyle.timelineContainer }><ImLocation color={"var(--location-icon-color)"} /></div></div><ExperienceSection experience={e} key={e.id}/></div>)}
                   <span className={ resumeStyle.vertical }></span>
                 </div>
                 <h2 className={ resumeStyle.title}>Education</h2>
                 <div className={ resumeStyle.container }>
-                  {education && education.map((e)=> <div className={ resumeStyle.homeSectionContainer }><div><div className={ resumeStyle.timelineContainer }><ImLocation color={"var(--location-icon-color)"}/></div></div><EducationSection education={e} key={e.id}/></div>)}
+                  {education && education.map((e)=> <div className={ resumeStyle.homeSectionContainer } key={e.id}><div><div className={ resumeStyle.timelineContainer }><ImLocation color={"var(--location-icon-color)"}/></div></div><EducationSection education={e} key={e.id}/></div>)}
                   <span className={ resumeStyle.vertical }></span>
                 </div>
               </div>
@@ -96,7 +97,7 @@ const Home = () => {
                     </div>
                   </div>
               </div> 
-            </div>
+            </div> : setLoading(!loading) }
     </main>
   )
 }
