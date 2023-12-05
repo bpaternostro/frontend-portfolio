@@ -1,6 +1,5 @@
 import React, { useContext, createContext, useState, useEffect } from 'react'
 import { API_ENDPOINTS } from '../apiConfig';
-import { getCookie } from '../coreMethods';
 
 const GlobalContext = createContext()
 const GlobalContextProvider = ({children}) => {
@@ -11,8 +10,7 @@ const GlobalContextProvider = ({children}) => {
     const [error, setError] = useState()
     const [filterFields, setFilterFields] = useState([])
     const [categories, setCategories] = useState([])
-    const csrfToken = getCookie('csrftoken');
-    
+
     const handleFilterFields = (filter) => {
         filterFields.includes(filter) ? setFilterFields(filterFields.filter((f) => f!== filter)) : setFilterFields([...filterFields, filter])
     }
@@ -43,11 +41,7 @@ const GlobalContextProvider = ({children}) => {
     useEffect(() => {
         fetch(API_ENDPOINTS.getPerson, {
             mode: 'cors',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-CSRFToken': csrfToken,
-              },
-            }
+            headers: {'Content-Type': 'application/json'}}
         )
         .then( res => {
             if(!res.ok){
