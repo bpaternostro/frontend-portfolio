@@ -2,25 +2,29 @@ import React, { useState } from 'react'
 import { buttonStyle, contactStyle } from '../styles'
 import { useNavigate } from 'react-router';
 import { API_ENDPOINTS } from '../apiConfig';
+import { getCookie } from '../coreMethods';
 
 const Contact = () => {
   const [data, setData] = useState({contact_type:0})
   const navigate = useNavigate()
-
+  const csrfToken = getCookie('csrftoken');
   const updateData = e => {
     setData({
         ...data,
         [e.target.name]: e.target.value
     })
   }
-
+  
   const handleSubmit = async (e) => {
       e.preventDefault();
       fetch(API_ENDPOINTS.postMessage, {
         mode: 'cors',
         method: "post",
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify(data)
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRFToken': csrfToken,
+        },
+        body: JSON.stringify(data),
       })
       .then( res => {
           if(!res.ok){

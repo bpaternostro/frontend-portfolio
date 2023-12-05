@@ -20,6 +20,7 @@ import {
 import { Link } from 'react-router-dom'
 import { MdUnfoldMore, MdOutlineUnfoldLess } from "react-icons/md";
 import { API_ENDPOINTS } from '../../apiConfig';
+import { getCookie } from '../../coreMethods';
 
 const Blogcard = ({ name, category, summary, description, link, image, like, share, skill, view, hashtags,  id }) => {
   const[actualLike, setActualLike] = useState(like)
@@ -28,11 +29,16 @@ const Blogcard = ({ name, category, summary, description, link, image, like, sha
   const[likeWasClicked, setLikeWasClicked] = useState(false)
   const[shareWasClicked, setShareWasClicked] = useState(false)
   const [show, setShow] = useState(false)
+  const csrfToken = getCookie('csrftoken');
+
   const reaction = (field) => {
     fetch(`${API_ENDPOINTS.postReaction}/${id}/register-reaction/`, {
       mode: 'cors',
       method: 'post',
-      headers: {'Content-Type': 'application/json'},
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRFToken': csrfToken,
+      },
       body: JSON.stringify({
         "field": field
       })
