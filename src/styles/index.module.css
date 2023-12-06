@@ -100,10 +100,10 @@ p{
 
 h1{
     color: var(--grey-white);;
-    font-size: 70px;
+    font-size: 80px;
     font-weight: var(--font-weight);
     font-family: var(--font-family-links);
-    line-height: 60px;
+    line-height: 70px;
 }
 
 h2{

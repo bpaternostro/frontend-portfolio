@@ -76,6 +76,14 @@ main > .mainDiv > div:nth-child(2) > div:nth-child(2) > span{
     width: 50%;
 }
 
+.portfolioSummary{
+    font-size: 18px;
+    font-weight: var(--font-weight-light);
+    background-color: var(--background-color-containers);
+    padding: 15px;
+    border-radius: 2px;
+}
+
 .profileImage{
     border-radius: 300px;
     width: 300px;  

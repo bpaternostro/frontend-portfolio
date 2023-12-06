@@ -29,11 +29,11 @@ const Home = () => {
             <div>
                 <div className={resumeStyle.about}>  
                     <span>
-                      <img className={ resumeStyle.profileImage } src={picture}></img>
+                      <img className={ resumeStyle.profileImage } src={picture} alt="profile picture"></img>
                     </span>
                     <span>
                       <h1>{`${first_name}`} {`${last_name}`}</h1>
-                      <span>{summary}</span>
+                      <h2 className={ resumeStyle.portfolioSummary }>{summary}</h2>
                     </span>
                 </div>
             </div>
