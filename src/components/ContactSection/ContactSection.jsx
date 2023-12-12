@@ -7,6 +7,7 @@ import { FaLinkedin } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaDownload } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 
 const ContactSection = ({email, phone, address, social_contact}) => {
 
@@ -16,7 +17,8 @@ const ContactSection = ({email, phone, address, social_contact}) => {
       "Linkedin": <FaLinkedin color={"#FFF"} size={25} className={resumeStyle.iconContactSection}/>,
       "Email": <MdEmail color={"#FFF"} size={25} className={resumeStyle.iconContactSection}/>,
       "Mobile": <IoLogoWhatsapp color={"#FFF"} size={25} className={resumeStyle.iconContactSection}/>,
-      "Resume": <FaDownload color={"#FFF"} size={25} className={resumeStyle.iconContactSection}/>
+      "Resume": <FaDownload color={"#FFF"} size={25} className={resumeStyle.iconContactSection}/>,
+      "Leetcode": <SiLeetcode color={"#FFF"} size={25} className={resumeStyle.iconContactSection}/>
     };
     return Icons[name];
   };
