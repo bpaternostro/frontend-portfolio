@@ -12,6 +12,10 @@ const PageRouter = () => {
             <Route path='/contact' element={<Contact/>} />
             <Route path='/under-construction' element={<UnderConstruction/>} />
             <Route path='/success' element={<Success/>} />
+            <Route path='/ecommerce' component={() => {
+                window.location.href = 'https://bpaternostro.site/ecommerce';
+                return null;
+            }}/>
             <Route path='*' element={<Error404/>} /> 
       </Routes>
     </>
