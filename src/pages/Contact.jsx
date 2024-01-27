@@ -33,14 +33,14 @@ const Contact = () => {
           return res.json()
       })
       .then( data => {
-        navigate('/success');
+        navigate(`${ROOT}/success`)
       })
       .catch( err => {
           console.log(err)
           return
       })
       .finally(() => {
-          navigate('/success');
+        navigate(`${ROOT}/success`)
       })
       
   }

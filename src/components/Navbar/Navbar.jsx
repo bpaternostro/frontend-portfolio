@@ -7,6 +7,8 @@ import { Link, useLocation } from 'react-router-dom'
 import { useGlobalContext } from '../../context/GlobalContextProvider'
 import { ContactSection } from '../../components'
 
+import {ROOT} from '../../apiConfig'
+
 const Navbar = () => {
     const {person, filterBySearchInputBox} = useGlobalContext()
     const {first_name, last_name, email, social_contact, phone, address} = person || {};
@@ -28,20 +30,20 @@ const Navbar = () => {
                 </span>
                 <span style={{display: show ? "none": "block"}}>
                     <nav>
-                        <Link to="/">
+                        <Link to={ROOT}>
                             <ImHome3 size={25}/>
                             { location.pathname ==='/' ? <span className={navbarStyle.sectionMark} style={{display:"block"}}></span> : <span className={navbarStyle.sectionMark} style={{display:"none"}}></span>}
                         </Link>
-                        <Link to="/blog">
+                        <Link to={`${ROOT}/blog`}>
                             Portfolio
-                            { location.pathname ==='/blog' ? <span className={navbarStyle.sectionMark} style={{display:"block"}}></span> : <span className={navbarStyle.sectionMark} style={{display:"none"}}></span>}
+                            { location.pathname ===`${ROOT}/blog` ? <span className={navbarStyle.sectionMark} style={{display:"block"}}></span> : <span className={navbarStyle.sectionMark} style={{display:"none"}}></span>}
                         </Link>
-                        <Link to="/contact">
+                        <Link to={`${ROOT}/contact`}>
                             Contact
-                            { location.pathname ==='/contact' ? <span className={navbarStyle.sectionMark} style={{display:"block"}}></span> : <span className={navbarStyle.sectionMark} style={{display:"none"}}></span>}
+                            { location.pathname ===`${ROOT}/contact` ? <span className={navbarStyle.sectionMark} style={{display:"block"}}></span> : <span className={navbarStyle.sectionMark} style={{display:"none"}}></span>}
                         </Link>
                         {
-                            location.pathname ==='/blog' ?
+                            location.pathname ===`${ROOT}/blog` ?
                             <Link to="" id={navbarStyle.searchNavIcon} onClick={handleShowSearch}>
                                 <AiOutlineSearch size={18} /></Link> : ""
                         } 
@@ -49,7 +51,7 @@ const Navbar = () => {
                 </span>
             </div>
             {
-                location.pathname ==='/blog' ?
+                location.pathname ===`${ROOT}/blog` ?
                 <div className={navbarStyle.searchContainer}>
                     <span>
                         <AiOutlineSearch size={18} color={"#202032"} />
