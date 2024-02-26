@@ -1,4 +1,4 @@
-const ENV = "local"
+const ENV = "prod"
 export const ROOT = "/portfolio"
 export const API_BASE_URL = ENV == "prod" ? 'https://bpaternostro.site/portfolio' : "http://localhost:8000/portfolio";
 export const API_ENDPOINTS = {
